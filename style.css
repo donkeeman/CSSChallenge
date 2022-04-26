@@ -1,6 +1,9 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap');
+
 /* reset */
 
-body, section, header, strong, div, h1{
+body, section, header, strong, div, h1, p{
     margin: 0;
     padding: 0;
     font: inherit;
@@ -31,17 +34,16 @@ h1{
     font-size: 10px;
 }
 
-strong{
+.headerStrong{
     font-size: 12px;
     display: block;
     position: relative;
     letter-spacing: 6px;
-    /* margin-right: -6px; */
     text-indent: 6px;
     padding: 0 4px;
 }
 
-strong::before{
+.headerStrong::before{
     content: "";
     position: absolute;
     left: 0;
@@ -51,11 +53,87 @@ strong::before{
     background-color: #2C5793;
 }
 
-strong::after{
+.headerStrong::after{
     content: "PHOTOSHOP";
     position: absolute;
     top: 0;
     left: 0;
     padding: 0 4px;
     letter-spacing: 6px;
+}
+
+.timeline{
+    width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.timeline::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: #1C90FF;
+    width: 4px;
+}
+
+.photoshop{
+    background-color: #111;
+    padding: 20px 20px 0;
+    border-radius: 16px;
+    position: relative;
+}
+
+.photoshop strong{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    color: #1C90FF;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.photoshop p{
+    color: white;
+    font-size: 12px;
+}
+
+.photoshop ul{
+    background-color: black;
+    color: #4A4A4A;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.photoshop:nth-child(2n+1){
+    margin-right: 55%;
+    text-align: right;
+}
+
+.photoshop:nth-child(2n+1) img{
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.photoshop:nth-child(2n){
+    margin-left: 55%;
+    text-align: left;
+}
+
+.photoshop:nth-child(2n) img{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
 }

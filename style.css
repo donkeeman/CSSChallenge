@@ -63,50 +63,78 @@ h1{
 }
 
 .timeline{
-    width: 700px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 60px 15%;
     position: relative;
 }
 
-.timeline::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #1C90FF;
-    width: 4px;
-    margin: 136px 0 236px;
+.psContainer{
+    box-sizing: border-box;
+    position: relative;
 }
 
-.photoshop{
+.psContainer.left{
+    padding-right: 30px;
+}
+
+.psContainer.right{
+    padding-left: 30px;
+}
+
+.psContainer::before{
+    content: "";
+    width: 30px;
+    height: 30px;
     background-color: #111;
-    padding: 20px 20px 0;
-    border-radius: 16px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    margin: auto 15px;
+    z-index: -10;
 }
 
-.photoshop::before{
+.psContainer.left::before{
+    right: 0;
+}
+
+.psContainer.right::before{
+    left: 0;
+}
+
+.psContainer::after{
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    border-top: 16px solid transparent;
-    border-bottom: 16px solid transparent;
+    background-color: #1C90FF;
+    width: 10px;
+    height: 120%;
+    margin: auto -5px;
 }
 
-.photoshop::after{
+.psContainer.left::after{
+    right: 0;
+}
+
+.psContainer.right::after{
+    left: 0;
+}
+
+/* .psContainer::after{
     content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 8px;
     height: 8px;
     border-radius: 50%;
     border: 4px solid #1C90FF;
     background-color: #222;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.photoshop{
+    background-color: #111;
+    padding: 20px 20px 0;
+    border-radius: 16px;
 }
 
 .photoshop strong{
@@ -135,46 +163,27 @@ h1{
     text-align: left;
 }
 
-.photoshop:nth-child(2n+1){
-    margin-right: 54%;
+.psContainer:nth-child(2n+1){
+    margin-right: 50%;
     text-align: right;
 }
 
-.photoshop:nth-child(2n+1) img{
-    position: absolute;
-    top: -40px;
-    left: 20px;
-    width: 80px;
-    height: 80px;
-}
-
-.photoshop:nth-child(2n+1)::before{
-    left: 100%;
-    border-left: 16px solid #111;
-}
-
-.photoshop:nth-child(2n+1)::after{
-    left: calc(100% + 20px);
-}
-
-.photoshop:nth-child(2n){
-    margin-left: 54%;
+.psContainer:nth-child(2n){
+    margin-left: 50%;
     text-align: left;
 }
 
-.photoshop:nth-child(2n) img{
+.psContainer img{
     position: absolute;
     top: -40px;
-    right: 20px;
     width: 80px;
     height: 80px;
 }
 
-.photoshop:nth-child(2n)::before{
-    right: 100%;
-    border-right: 16px solid #111;
+.psContainer.left img{
+    left: 20px;
 }
 
-.photoshop:nth-child(2n)::after{
-    right: calc(100% + 20px);
+.psContainer.right img{
+    right: 20px;
 }

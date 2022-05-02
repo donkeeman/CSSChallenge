@@ -63,7 +63,7 @@ h1{
 }
 
 .container{
-    padding: 40px 0;
+    padding: 80px 0;
     margin: 0 auto;
     max-width: 1200px;
     overflow-y: hidden;
@@ -105,12 +105,13 @@ h1{
 .timeline::before{
     content: "";
     background-color:  #1C90FF;
-    width: 10px;
+    width: 6px;
+    height: 120%;
     position: absolute;
     top: 0;
     bottom: 0;
-    margin: 0 -5px;
-    transform: translateY(50%);
+    margin: 0 -3px;
+    transform: translateY(40%);
 }
 
 .timeline:nth-child(2n+1)::before{
@@ -124,15 +125,15 @@ h1{
 .timeline::after{
     box-sizing: border-box;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    border: 10px solid #1C90FF;
+    border: 6px solid #1C90FF;
     background-color: #222;
     position: absolute;
     top: 0;
     bottom: 0;
-    margin: auto -15px;
+    margin: auto -12px;
 }
 
 .timeline:nth-child(2n+1)::after{
@@ -205,4 +206,42 @@ h1{
     font-size: 12px;
     font-weight: bold;
     text-align: left;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        padding: 0;
+    }
+
+    .timeline:nth-child(2n+1), .timeline:nth-child(2n){
+        margin-left: 0;
+        margin-right: 0;
+        margin: 40px 0;
+        width: 100%;
+    }
+
+    .timeline::before{
+        z-index: -10;
+    }
+
+    .timeline:nth-child(2n+1)::before{
+        right: 50%;
+    }
+
+    .timeline:nth-child(2n)::before{
+        left: 50%;
+    }
+
+    .timeline::after, .photoshop::before{
+        display: none;
+    }
+
+    .timeline img{
+        margin: 10px 80px;
+    }
+
+    .photoshop{
+        padding: 20px 40px 0;
+    }
+
 }

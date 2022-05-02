@@ -2,4 +2,6 @@
 ## Timeline
  포토샵 타임라인 페이지 구현  
  https://lhw421.github.io/CSSChallenge/Timeline
-## 영화 소개
+## Cinema  
+ 시네마 페이지 구현
+ https://lhw421.github.io/CSSChallenge/Cinema

@@ -31,29 +31,29 @@ body{
 main{
     overflow: hidden;
 }
-
+/* 
 .cover{
     background: linear-gradient(to bottom, transparent 70%, rgba(16, 16, 16, 0.5) 80%, rgba(16, 16, 16, 0.9) 90%, #111);
-}
-
-.cover img{
-    display: block;
-    width: 100%;
-    z-index: -10;
-    position: relative;
-}
+} */
 
 .container{
     background-color: #111;
     box-shadow: 0 0 1rem 2rem #111;
     box-sizing: border-box;
-    padding: 50px 30px;
+    padding-top: 60%;
 }
 
+.cover{
+    margin-top: -60%;
+    display: block;
+    width: 100%;
+    position: relative;
+}
 .left{
-    margin-top: -100px;
+    margin-top: -3rem;
     box-sizing: border-box;
     display: inline-block;
+    padding: 50px 30px;
     width: 60%;
 }
 
@@ -88,7 +88,7 @@ main{
 }
 
 .right{
-    margin-top: -6rem;
+    margin-top: -1rem;
     box-sizing: border-box;
     float: right;
     width: 35%;

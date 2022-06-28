@@ -4,4 +4,4 @@
  https://donkeeman.github.io/CSSChallenge/Timeline
 ## Cinema  
  시네마 페이지 구현  
- https://donkeeman1.github.io/CSSChallenge/Cinema
+ https://donkeeman.github.io/CSSChallenge/Cinema
